@@ -1,0 +1,50 @@
+@import "../../variables.scss";
+
+.footer {
+  background: $primaryBackgroundColor;
+  padding: 40px 0;
+  &__container {
+    display: flex;
+
+    align-items: center;
+    gap: 40px;
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+    }
+  }
+  &__logo {
+    flex: 0 1 6%;
+    align-self: self-start;
+    z-index: 4;
+  }
+
+  &__content {
+    padding: 100px 0;
+    flex: 0 1 46.999%;
+    color: #47bef5;
+    text-align: center;
+    font-family: Mulish;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: normal;
+    letter-spacing: -0.8px;
+    @media (max-width: 767.98px) {
+      padding: 50px 0;
+      font-size: 35px;
+    }
+  }
+
+  &__social {
+    align-self: self-start;
+    flex: 0 1 46.999%;
+    color: #47bef5;
+    text-align: center;
+    font-family: Mulish;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: normal;
+    letter-spacing: -0.48px;
+  }
+}
