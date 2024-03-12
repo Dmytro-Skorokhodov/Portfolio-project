@@ -2,7 +2,7 @@ import "./Project.scss";
 
 export default function Project({ name = "", description, img, href }) {
   return (
-    <a href={href} className="grid-projects__project project">
+    <a href={href} target="_blank" className="grid-projects__project project">
       <div className="project__block block-project">
         <h3 className="block-project__name">{name}</h3>
         <p className="block-project__description">
@@ -10,7 +10,9 @@ export default function Project({ name = "", description, img, href }) {
           Figma using a portfolio as an example.
         </p>
         <button className="block-project__button button">
-          <a href={href}>View Project</a>
+          <a href={href} target="_blank">
+            View Project
+          </a>
         </button>
       </div>
       <div className="project__image-ibg">
