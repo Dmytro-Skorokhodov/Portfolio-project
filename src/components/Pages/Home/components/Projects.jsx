@@ -1,6 +1,7 @@
 import Container from "../../../UI/Container";
 import Project from "./Project";
 import "./Projects.scss";
+import { useRef } from "react";
 
 const projects = [
   {
@@ -41,9 +42,20 @@ const projects = [
   },
 ];
 
-export default function Projects() {
+export default function Projects({ moveToProjects }) {
+  const targetRef = useRef(null);
+
+  const scrollToTarget = () => {
+    // Виклик методу scrollIntoView для переміщення до елементу з вказаним ref
+    targetRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  if (moveToProjects) {
+    scrollToTarget();
+  }
+
   return (
-    <section className="homepage__projects projects">
+    <section ref={targetRef} className="homepage__projects projects">
       <Container obj="projects">
         <h2 className="projects__title">Projects</h2>
         <div className="projects__grid grid-projects">
