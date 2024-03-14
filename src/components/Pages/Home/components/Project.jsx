@@ -3,7 +3,6 @@ import { useInView } from "react-intersection-observer";
 import { useRef } from "react";
 
 export default function Project({ name = "", description, img, href }) {
- 
   const [ref, inView] = useInView({
     triggerOnce: true, // Зробить виклик функції зміни видимості тільки один раз
     threshold: 0.5, // Визначте, скільки відсотків елементу повинно бути видимим для виклику функції

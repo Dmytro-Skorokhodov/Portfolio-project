@@ -1,4 +1,5 @@
 import "./Home.scss";
+import About from "./components/Skills";
 import HomePageMain from "./components/HomePageMain";
 import Projects from "./components/Projects";
 import { useEffect, useState } from "react";
@@ -19,6 +20,7 @@ export default function Home() {
   return (
     <main className="homepage">
       <HomePageMain moveToProjects={moveToProjectsHandler} />
+      <About />
       <Projects moveToProjects={moveToProjects} />
     </main>
   );

@@ -57,7 +57,7 @@ export default function Projects({ moveToProjects }) {
   return (
     <section ref={targetRef} className="homepage__projects projects">
       <Container obj="projects">
-        <h2 className="projects__title">Projects</h2>
+        <h2 className="projects__title title">Projects</h2>
         <div className="projects__grid grid-projects">
           {projects.map((proj) => (
             <Project
